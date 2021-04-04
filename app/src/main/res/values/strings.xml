@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TodoList</string>
+    <string name="add_task">Добавить задачу</string>
+    <string name="todo_list_empty">У вас нет теĸущих задач</string>
+    <string name="edit_btn">Ред.</string>
+    <string name="delete_btn">Уд.</string>
 </resources>
