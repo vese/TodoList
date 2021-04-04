@@ -4,4 +4,12 @@
     <string name="todo_list_empty">У вас нет теĸущих задач</string>
     <string name="edit_btn">Ред.</string>
     <string name="delete_btn">Уд.</string>
+    <string name="cancel_btn">Отмена</string>
+    <string name="save_btn">Сохранить</string>
+    <string name="edit_hint">Задача</string>
+    <string name="confirm_msg">Вы уверены, что хотите удалить элемент?</string>
+    <string name="yes_btn">Да</string>
+    <string name="no_btn">Нет</string>
+    <string name="not_changed_msg">Для сохранения информации внесите изменения в задачу</string>
+    <string name="can_not_save">Не удалось сохранить, попробуйте снова</string>
 </resources>

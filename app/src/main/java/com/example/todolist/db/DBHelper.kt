@@ -29,6 +29,16 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         return Todo.getWaterTrackParametersList(cursor)
     }
 
+    fun deleteTodo(id: Int) {
+        val db = this.readableDatabase
+        db.execSQL(Todo.getDeleteQuery(id))
+    }
+
+    fun insertTodo(name: String) {
+        val db = this.readableDatabase
+        db.execSQL(Todo.getInsertQuery(name))
+    }
+
     fun updateTodo(todo: Todo) {
         val db = this.readableDatabase
         db.execSQL(Todo.getUpdateQuery(todo))
