@@ -11,16 +11,17 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.addTextChangedListener
 import com.example.todolist.db.DBHelper
 import com.example.todolist.db.Todo
+import com.example.todolist.db.TodoDbService
 import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var dbHelper: DBHelper
+    private lateinit var dbHelper: TodoDbService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        dbHelper = DBHelper(this)
+        dbHelper = TodoDbService(DBHelper(this))
 
         updateTable()
     }
