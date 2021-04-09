@@ -31,8 +31,8 @@ jobs:
         with:
           java-version: 1.8
         
-      - name: Build Project
-        uses: ./gradlew build
-        
       - name: Run Tests
-        uses: ./gradlew test
+        run: ./gradlew test
+        
+      - name: Build Project
+        run: ./gradlew build
