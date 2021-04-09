@@ -48,7 +48,7 @@ class Todo {
 
         fun getWaterTrackParametersList(cursor: Cursor?): ArrayList<Todo> {
             val result: ArrayList<Todo> = ArrayList()
-            if (cursor!!.moveToFirst()) {
+            if (cursor != null && cursor!!.moveToFirst()) {
                 result.add(getTodo(cursor))
                 while (cursor.moveToNext()) {
                     result.add(getTodo(cursor))
