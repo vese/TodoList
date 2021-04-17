@@ -48,7 +48,7 @@ class Todo {
 
         fun getWaterTrackParametersList(cursor: Cursor?): ArrayList<Todo> {
             val result: ArrayList<Todo> = ArrayList()
-            if (cursor!!.moveToFirst()) {
+            if (cursor != null && cursor!!.moveToFirst()) {
                 result.add(getTodo(cursor))
                 while (cursor.moveToNext()) {
                     result.add(getTodo(cursor))
@@ -59,9 +59,11 @@ class Todo {
         }
 
         private fun getTodo(cursor: Cursor): Todo {
+            val idColumnIndex = cursor.getColumnIndex(ID_COLUMN_NAME)
+            val nameColumnIndex = cursor.getColumnIndex(NAME_COLUMN_NAME)
             return Todo(
-                cursor.getString(cursor.getColumnIndex(ID_COLUMN_NAME)).toInt(),
-                cursor.getString(cursor.getColumnIndex(NAME_COLUMN_NAME))
+                cursor.getString(idColumnIndex).toInt(),
+                cursor.getString(nameColumnIndex)
             )
         }
     }
