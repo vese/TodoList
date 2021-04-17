@@ -26,7 +26,7 @@ class TodoTest {
     @Test
     fun get_empty() {
         val todos = dbService.getTodoList()
-        assertEquals(0, todos.size)
+        assertEquals(10, todos.size)
     }
 
     @Test
